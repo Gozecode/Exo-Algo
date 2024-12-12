@@ -18,20 +18,24 @@ console.info("Exercice 1 :", multiply(2, 3));
 // Ajuste la fonction qui prend en paramètre un tableau et qui retourne le premier élément du tableau.
 // Exemple : [1, 2, 3] => 1
 
-// export const getFirstElement = () => {}
+export const getFirstElement = (array) => {
+	return array[0];
+};
 
-// console.info("Exercice 2 : ", getFirstElement([1, 2, 3]));
-
+console.info("Exercice 2 : ", getFirstElement([1, 2, 3]));
+console.info("Exercice 2 : ", getFirstElement([10, 2, 3]));
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 3
 
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit supprimer le dernier élément du tableau.
 // Exemple : [1, 2, 3] => [1, 2]
 
-// export const removeLastElement = () => {
-// };
+export const removeLastElement = (array) => {
+	array.pop();
+	return array;
+};
 
-// console.info("Exercice 3 : ", removeLastElement([1, 2, 3]));
+console.info("Exercice 3 : ", removeLastElement([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
