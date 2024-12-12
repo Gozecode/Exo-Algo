@@ -8,7 +8,11 @@
 // Ajuste la fonction "multiply" qui prend deux paramètres (a et b) et retourne la somme multipliée des deux paramètres.
 // Exemple : a = 2, b = 3 => 2 * 3 = 6
 
-export const multiply = (a, b) => {};
+export const multiply = (a, b) => {
+	let total = 0;
+	total = a * b;
+	return total;
+};
 
 console.info("Exercice 1 :", multiply(2, 3));
 
@@ -23,7 +27,7 @@ export const getFirstElement = (array) => {
 };
 
 console.info("Exercice 2 : ", getFirstElement([1, 2, 3]));
-console.info("Exercice 2 : ", getFirstElement([10, 2, 3]));
+
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 3
 
@@ -43,9 +47,15 @@ console.info("Exercice 3 : ", removeLastElement([1, 2, 3]));
 // Ajuste la fonction qui prend en paramètre un tableau comprennant des nombres et qui doit retourner la somme de tous les nombres du tableau.
 // Exemple : [1, 2, 3] => 6
 
-// export const sumArray = () => {}
+export const sumArray = (array) => {
+	let total = 0;
+	for (let i = 0; i < array.length; i++) {
+		total += array[i];
+	}
+	return total;
+};
 
-// console.info("Exercice 4 : ", sumArray([5, 6, 7]));
+console.info("Exercice 4 : ", sumArray([5, 6, 7]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 5
@@ -53,9 +63,11 @@ console.info("Exercice 3 : ", removeLastElement([1, 2, 3]));
 //Ajuste la fonction qui prend en paramètre une string et qui doit retourner la string inversée.
 // Exemple : "Hello" => "olleH"
 
-// export const reverseString = () => {}
+export const reverseString = (array) => {
+	return array.split("").reverse().join("");
+};
 
-// console.info("Exercice 5 : ", reverseString("Hello"));
+console.info("Exercice 5 : ", reverseString("Hello"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 6
