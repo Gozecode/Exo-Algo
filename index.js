@@ -75,9 +75,11 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit retourner le plus grand nombre du tableau.
 // Exemple : [1, 2, 3] => 3
 
-// export const getMax = () => {}
+export const getMax = (array) => {
+	return Math.max(...array);
+};
 
-// console.info("Exercice 6 : ", getMax([1, 2, 3]));
+console.info("Exercice 6 : ", getMax([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 7
@@ -85,9 +87,11 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit retourner le plus petit nombre du tableau.
 // Exemple : [1, 2, 3] => 1
 
-// export const getMin = () => {}
+export const getMin = (array) => {
+	return Math.min(...array);
+};
 
-// console.info("Exercice 7 : ", getMin([1, 2, 3]));
+console.info("Exercice 7 : ", getMin([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 8
@@ -95,9 +99,17 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre une string et qui doit retourner la string sans les voyelles.
 // Exemple : "Hello" => "Hll"
 
-// export const removeVowels = () => {}
+export const removeVowels = (string) => {
+	return string
+		.split("")
+		.filter(
+			(letter) =>
+				!["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"].includes(letter),
+		)
+		.join("");
+};
 
-// console.info("Exercice 8 : ", removeVowels("Hello"));
+console.info("Exercice 8 : ", removeVowels("Hello"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 9
@@ -105,9 +117,11 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit retourner le tableau trié par ordre croissant.
 // Exemple : [1, 3, 2] => [1, 2, 3]
 
-// export const sortArray = () => {}
+export const sortArray = (array) => {
+	return array.sort();
+};
 
-// console.info("Exercice 9 : ", sortArray([1, 3, 2]));
+console.info("Exercice 9 : ", sortArray([1, 3, 2]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 10
@@ -115,11 +129,13 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre une string et qui renvoie un tableau avec toutes les rotations possibles de cette string.
 // Exemple : "Hello" => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
 
-// export const getStringRotations = () => {
+export const getStringRotations = (string) => {
+	return [...string].map(
+		(_, i) => string.slice(i + 1) + string.slice(0, i + 1),
+	);
+};
 
-// };
-
-// console.info("Exercice 10 : ", getStringRotations("Hello"));
+console.info("Exercice 10 : ", getStringRotations("Hello"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 11
@@ -127,9 +143,11 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit ajouter le nombre 1 à chaque élément du tableau.
 // Exemple : [1, 2, 3] => [2, 3, 4]
 
-// export const incrementArray = () => {}
+export const incrementArray = (array) => {
+	return array.map((element) => element + 1);
+};
 
-// console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
+console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 12
@@ -137,9 +155,11 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec la longueur de chaque string.
 // Exemple : ["Hello", "World"] => [5, 5]
 
-// export const getLengths = () => {}
+export const getLengths = (array) => {
+	return array.map((string) => string.length);
+};
 
-// console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
+console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 13
@@ -147,9 +167,11 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les premières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["H", "W"]
 
-// export const getFirstLetters = () => {}
+export const getFirstLetters = (array) => {
+	return array.map((string) => string[0]);
+};
 
-// console.info("Exercice 13 : ", getFirstLetters(["Hello", "World"]));
+console.info("Exercice 13 : ", getFirstLetters(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 14
@@ -157,9 +179,11 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les dernières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["o", "d"]
 
-// export const getLastLetters = () => {}
+export const getLastLetters = (array) => {
+	return array.map((string) => string[string.length - 1]);
+};
 
-// console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
+console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 15
@@ -167,14 +191,14 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit renvoyer tout les string qui ont une longueur de 5 caractères ou plus.
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 
-// export const filterLongStrings = () => {
+export const filterLongStrings = (array) => {
+	return array.filter((string) => string.length >= 5);
+};
 
-// };
-
-// console.info(
-// 	"Exercice 15 : ",
-// 	filterLongStrings(["Hello", "World", "Test", "Salut", "Yo"]),
-// );
+console.info(
+	"Exercice 15 : ",
+	filterLongStrings(["Hello", "World", "Test", "Salut", "Yo"]),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 16
@@ -182,9 +206,11 @@ console.info("Exercice 5 : ", reverseString("Hello"));
 // Ajuste la fonction qui prend une chaîne de caractères en format snake_case et doit retourner une nouvelle chaîne de caractères contenant les mêmes mots, mais sans les underscores.
 // Exemple : "Bonjour_c'est_papy" => "bonjour c'est papy"
 
-// export const snake_case = () => {}
+export const snake_case = (string) => {
+	return string.replace(/_/g, " ");
+};
 
-// console.info("Exercice 16 : ", snake_case("Bonjour_c'est_papy"));
+console.info("Exercice 16 : ", snake_case("Bonjour_c'est_papy"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 17
